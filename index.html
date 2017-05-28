@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<style>
+    body {
+        margin : 0;
+    }
+    #back,#ball,#me,#computer,#gauge,#effect {
+        position : absolute;
+        left : 0;
+        top : 0;
+    }
+    .scoreBoard p {
+        position : absolute;
+        color : white;
+        text-align: center;
+    }
+    .scoreBoard #me_score {
+        left : 700px;
+        top : 0;
+    }
+    .scoreBoard #com_score {
+        left : 800px;
+        top : 0;    
+    }
+
+</style>
+
+</head>
+
+<body scroll='no'>
+    <canvas id='display' width='1500' height='850'> </canvas> <!-- 21인치 -->
+    <canvas id='back' width='1500' height='850'> </canvas>
+    <canvas id='ball' width='1500' height='850'> </canvas>
+    <canvas id='me' width='1500' height='850'> </canvas>
+    <canvas id='computer' width='1500' height='850'> </canvas>
+    <canvas id='gauge' width='1500' height='850'> </canvas>
+    <canvas id='effect' width='1500' height='850'> </canvas>
+
+    <div class='scoreBoard'> 
+        <p id='me_score'>0</p>
+        <p id='com_score'>0</p> 
+    </div>  
+
+</body>
+<script>
+    const ctx = document.querySelector('canvas').getContext('2d'); // global variable
+    const back_ctx = document.querySelector('#back').getContext('2d'); // 애니메이션을위한 캔버스
+    const ball_ctx = document.querySelector('#ball').getContext('2d'); // 볼 애니메이션을위한 캔버스
+    const me_ctx = document.querySelector('#me').getContext('2d'); 
+    const gauge_ctx = document.querySelector('#gauge').getContext('2d');
+    const effect_ctx = document.querySelector('#effect').getContext('2d');
+
+    const me_score = document.querySelector('#me_score');
+    const com_score = document.querySelector('#com_score');
+</script>
+<script src='js/convert_main.js'> </script>
+
+</html>
+
+
